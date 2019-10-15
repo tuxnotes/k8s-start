@@ -1,0 +1,12 @@
+# NOTE: apiserver port must be 6443 and varibale can not contain '#'
+K8S_VERSION=1.14
+ETCD_MASTER_IP="10.211.55.110"
+K8S_API_SERVER_ADVERTISE_ADDRESS=10.211.55.110  # apiserver ip
+K8S_API_SERVER=https://10.211.55.110:6443  # apiserver address 6443 cannot change now
+K8S_CLUSTER_DNS=10.1.0.10 # cluster dns ip
+K8S_CLUSTER_IP_CIDR=10.1.0.0/16  # cluster ip range
+K8S_CLUSTER_GATEWAY=10.1.0.1 # cluster gateway
+K8S_CLUSTER_DOMAIN=k8s.idevz.org  #cluster domain
+K8S_POD_IP_CIDR=10.2.0.0/16 # pod ip range
+ETCD_SERVER=https://10.211.55.110:2379 # etcd server the port 2379 cannot change now and now it's noly support http
+MACHINE_IP_DETECT_HOST=i.api.weibo.com

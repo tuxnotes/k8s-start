@@ -1,0 +1,26 @@
+kind: KubeletConfiguration
+apiVersion: kubelet.config.k8s.io/v1beta1
+address: "10.211.55.110"
+port: 10250
+cgroupDriver: systemd
+cgroupRoot: /
+clusterDNS:
+- "10.1.0.10"
+featureGates:
+  SupportPodPidsLimit: false
+#   SupportNodePidsLimit: false
+clusterDomain: "k8s.idevz.org"
+failSwapOn: false
+hairpinMode: promiscuous-bridge
+serializeImagePulls: false
+authentication:
+  x509:
+    clientCAFile: /etc/kubernetes/pki/ca.pem
+  webhook:
+    enabled: true
+  anonymous:
+    enabled: true
+authorization:
+  mode: Webhook
+rotateCertificates: true
+staticPodPath: /etc/kubernetes/manifests
